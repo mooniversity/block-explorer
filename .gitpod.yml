@@ -3,4 +3,5 @@ image:
 tasks:
     - init: "./assets/scripts/initial-setup.sh"
       command: "./assets/scripts/recurring-setup.sh"
+    - init: "rm /workspace/.pip-modules/bin/{autopep8,epylint,pydocstyle,pyflakes,pylint,pyreverse}"
 
