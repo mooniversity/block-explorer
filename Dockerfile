@@ -7,8 +7,8 @@ RUN sudo add-apt-repository ppa:bitcoin/bitcoin \
     && sudo apt-get install -yq bitcoind
 
 # Uninstall linters
-RUN pip2 uninstall -y pyflakes pipenv pylint rope flake8 autopep8 pep8 pylama pydocstyle bandit \
-    && pip3 uninstall -y pyflakes pipenv pylint rope flake8 autopep8 pep8 pylama pydocstyle bandit 
+RUN pip2 uninstall -y pyflakes pipenv pylint rope flake8 autopep8 pep8 pylama pydocstyle banditpython-language-server[all]  \
+    && pip3 uninstall -y pyflakes pipenv pylint rope flake8 autopep8 pep8 pylama pydocstyle bandit python-language-server[all]
 
 # Update bashrc
 RUN echo "export BITCOIN_DATA_DIR='/workspace/bitcoin'" >> $HOME/.bashrc \
