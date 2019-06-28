@@ -8,8 +8,7 @@ RUN sudo add-apt-repository ppa:bitcoin/bitcoin \
 
 # Update bashrc
 RUN echo "export BITCOIN_DATA_DIR='/workspace/bitcoin'" >> $HOME/.bashrc \
-    && echo "alias testnet='bitcoin-cli -testnet -datadir=/workspace/bitcoin -rpcuser=bitcoin -rpcpassword=python'" >> $HOME/.bashrc \
-    && echo "alias testnetd='bitcoind -testnet -datadir=/workspace/bitcoin -prune=550'" >> $HOME/.bashrc \
+    && echo "alias testnet='bitcoin-cli -testnet -datadir=/workspace/bitcoin -rpcuser=bitcoin -rpcpassword=python' -rpcconnect=68.183.110.103" >> $HOME/.bashrc \
     && echo "alias mainnet='bitcoin-cli -rpcuser=bitcoin -rpcpassword=python -rpcconnect=68.183.110.103'" >> $HOME/.bashrc \
     && echo "alias python='python3'" >> $HOME/.bashrc \
     && echo "alias pip='pip3'" >> $HOME/.bashrc
